@@ -109,3 +109,27 @@ ORDER BY last_name DESC
 LIMIT 4;
 ~~~~
 ## <p id = 'Ödev 6' > Ödev 6 </p>
+#### film tablosunda bulunan rental_rate sütunundaki değerlerin ortalaması nedir?
+~~~~sql
+SELECT round(AVG(rentaL_rate),2) FROM film; 
+~~~~
+#### film tablosunda bulunan filmlerden kaçtanesi 'C' karekteri ile başlar?
+~~~~sql
+SELECT COUNT(title) FROM film 
+WHERE title LIKE 'C%';
+~~~~
+#### film tablosunda bulunan filmlerden rental_rate değeri 0.99 a eşit olan en uzun (length) film kaç dakikadır?
+~~~~sql
+SELECT MAX(length) FROM film
+WHERE rental_rate = 0.99;
+~~~~
+#### film tablosunda bulunan filmlerin uzunluğu 150 dakikadan büyük olanlarına ait kaç farklı replacement_cost değeri vardır?
+~~~~sql
+SELECT COUNT(DISTINCT replacement_cost) FROM film
+WHERE length > 150;
+~~~~
+## <p id = 'Ödev 7' > Ödev 7 </p>
+#### 
+~~~~sql
+
+~~~~
