@@ -129,6 +129,30 @@ SELECT COUNT(DISTINCT replacement_cost) FROM film
 WHERE length > 150;
 ~~~~
 ## <p id = 'Ödev 7' > Ödev 7 </p>
+#### film tablosunda bulunan filmleri rating değerlerine göre gruplayınız.
+~~~~sql
+SELECT rating FROM film
+GROUP BY rating;
+~~~~
+#### film tablosunda bulunan filmleri replacement_cost sütununa göre grupladığımızda film sayısı 50 den fazla olan replacement_cost değerinive karşılık gelen film sayısını sıralayınız.
+~~~~sql
+SELECT replacement_cost FROM film
+GROUP BY replacement_cost
+HAVING COUNT(title) <50;
+~~~~
+#### customer tablosunda bulunan store_id değerlerine karşılık gelen müşteri sayılarını nelerdir?
+~~~~sql
+SELECT store_id , COUNT(*)  FROM customer
+GROUP BY store_id;
+~~~~
+#### city tablosunda bulunan şehir verilerini country_id sütununa göre gruplandırdıktan sonra en fazla şehir sayısı barındıra country_id bilgisinive şehir sayısını paylaşınız
+~~~~sql
+SELECT COUNT(*),country_id FROM city
+GROUP BY country_id;
+ORDER BY COUNT(*) DESC
+LIMIT 1;
+~~~~
+## <p id = 'Ödev 8' > Ödev 8 </p>
 #### 
 ~~~~sql
 
