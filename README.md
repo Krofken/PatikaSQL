@@ -217,11 +217,14 @@ insert into employee (id, name, email, birthday) values (50, 'Ernestine', 'eslei
 ~~~~
 #### Sütunların her birine göre diğer sütunları güncelleyecek 5 adet UPDATE işlemi yapalım.
 ~~~~sql
-
+UPDATE employee
+   SET name = 'Invalid Name'
+   WHERE name LIKE 'C%';
 ~~~~
 #### Sütunların her birine göre ilgili satırı silecek 5 adet DELETE işlemi yapalım.
 ~~~~sql
-
+DELETE FROM employee
+ WHERE NAME LIKE '_____'
 ~~~~
 ## <p id = 'Ödev 9' > Ödev 9 </p>
 #### 
